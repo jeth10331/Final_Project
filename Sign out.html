@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Out Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #ff416c, #ff4b2b);
+            padding: 50px;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        h1 {
+            color: #333;
+        }
+        .signout-button {
+            display: block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #d9534f;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            margin-top: 10px;
+            width: auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .signout-button:hover {
+            background-color: #c9302c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>You have been signed out</h1>
+        <p>Click below to return to the login page.</p>
+        <button class="signout-button" onclick="redirectToLogin()">Sign In Again</button>
+    </div>
+
+    <script>
+        function redirectToLogin() {
+            window.location.href = "Log in Page.html"; // Update with your login page filename
+        }
+    </script>
+</body>
+</html>

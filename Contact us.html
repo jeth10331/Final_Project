@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-image: url(https://graphiceraschool.com/wp-content/uploads/2024/06/image-9.jpg);
+            padding: 50px;
+            background-color: rgba(245, 245, 245, 0.456);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 50px;
+            background-color: rgba(245, 245, 245, 0.588);
+            border-radius: 10px;
+        }
+
+        .contact-info {
+            text-align: center;
+        }
+
+        .contact-info h2 {
+            margin-bottom: 10px;
+        }
+
+        .contact-info p {
+            color: black;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .captcha {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .captcha img {
+            margin-right: 10px;
+        }
+
+        .submit-button {
+            width: 50%;
+            padding: 10px;
+            font-size: 14px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .nav {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+
+        .nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 18px;
+            color: black;
+            font-weight: bold;
+        }
+        .nav a[href="Sign out.html"] {
+    color: rgba(255, 0, 0, 0.621);
+    font-weight: bold;
+}
+
+        .captcha-image {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .captcha-image img {
+            width: 150px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        #response-message {
+            display: none;
+            color: green;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+    
+
+    </style>
+</head>
+<body>
+
+    <div class="nav">
+        <a href="Home.html">Home</a>
+        <a href="About us.html">About Us</a>
+        <a href="Contact us.html">Contact Us</a>
+        <a href="Sign out.html">Sign out</a>
+    </div>
+
+    <div class="container">
+        <div class="contact-info">
+            <h2>GET IN TOUCH</h2>
+            <p>We Are Available</p>
+            <p>If you are interested in finding out more about how we can help your organization, please fill out the form below. You can visit us at any time between Monday to Saturday (7 AM to 5 PM +8 GMT).</p>
+        </div>
+        
+        <div class="contact-details">
+            <p>📍 123 Education Lane, Suite 456, Learning City, ST 78901</p>
+            <p>📧 Email: support@schoolattendancehub.com</p>
+            <p>📞 Phone: (027) 355.6284 / (028) 249.1178</p>
+            <p>📱 Mobile: 0932.872.4228 (SUN) / 0947.895.4228 (SMART) / 0917.814.4228 (GLOBE)</p>
+        </div>
+
+        <!-- Form -->
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="first-name">First Name *</label>
+                <input type="text" id="first-name" name="first-name" required>
+            </div>
+            <div class="form-group">
+                <label for="last-name">Last Name *</label>
+                <input type="text" id="last-name" name="last-name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="text" id="phone" name="phone">
+            </div>
+
+            <div class="captcha">
+                <img src="captcha-placeholder.png" alt="Captcha">
+                <input type="text" name="captcha" placeholder="Type the code below" required>
+            </div>
+
+            <div class="captcha-image">
+                <img src="https://irp-cdn.multiscreensite.com/3c4f0eef/dms3rep/multi/captcha.JPG" alt="Verification Image">
+            </div>
+
+            <button type="submit" class="submit-button">SUBMIT</button>
+        </form>
+
+        <!-- Success Message -->
+        <p id="response-message">✅ Form submitted successfully!</p>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("contact-form").addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent actual form submission
+
+                // Show alert
+                alert("✅ Form submitted successfully!");
+
+                // Show response message on the page
+                let responseMessage = document.getElementById("response-message");
+                responseMessage.style.display = "block";
+
+                // Clear form fields
+                this.reset();
+            });
+        });
+    </script>
+
+</body>
+</html>

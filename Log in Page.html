@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            padding: 50px;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        h1 {
+            color: #333;
+        }
+        .input-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .input-box {
+            margin: 10px 0;
+            padding: 10px;
+            width: 60%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .login-button {
+            display: block;
+            padding: 8px 15px;
+            font-size: 16px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            margin-top: 10px;
+            width: auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .login-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the School Attendance System</h1>
+        <p>Please enter your details and log in.</p>
+        <div class="input-container">
+            <input type="text" class="input-box" placeholder="Enter your name" id="name">
+            <input type="email" class="input-box" placeholder="Enter your email" id="email">
+        </div>
+        <button class="login-button" onclick="redirectToHome()">Login</button>
+    </div>
+
+    <script>
+        function redirectToHome() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            
+            if (name === "" || email === "") {
+                alert("Please enter your name and email.");
+                return;
+            }
+            window.location.href = "Home.html"; // Change this to the correct page
+        }
+    </script>
+</body>
+</html>
